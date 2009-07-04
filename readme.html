@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>FancyForm - Javascript checkbox replacement</title>
+	<meta name="description" content="FancyForm is a powerful checkbox replacement script used to provide the ultimate flexibility in changing the appearance and function of HTML form elements.">
+	<link rel="stylesheet" href="readme_files/screensmall.css" type="text/css" media="screen">
+</head>
+<body>
+<hr id="topborder">
+
+<div id="sidebar">
+	<h1><a href="#">Fancy<em>Form</em></a></h1>
+	<p>by <a href="http://lipidity.com">Vacuous Virtuoso</a></p>
+	<ul id="nav">
+		<li><a href="#overview">Overview</a></li>
+		<li><a href="#example">Example</a></li>
+		<li><a href="#usage">Installation</a></li>
+		<li><a href="#advanced">Advanced</a></li>
+		<li><a href="#support">Support</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+</div>
+
+<div id="content">
+
+<hr id="overview">
+<div class='section'>
+	<h2>Overview</h2>
+	<p class="lead">FancyForm is a <em>powerful</em> checkbox replacement script used to provide the ultimate <em>flexibility</em> in changing the appearance and function of <acronym>HTML</acronym> form elements. It's accessible, <em>easy</em> to use and <em>degrades gracefully</em> on all older, non-supporting browsers.</p>
+	<h3>At a glance</h3>
+	<ul>
+		<li><strong>Quick Setup:</strong> Only two lines of markup needed</li>
+		<li><strong>Completely Extendible</strong>: Numerous customization options</li>
+		<li><strong>Degrades Gracefully</strong>: Forms still work on older browsers</li>
+	</ul>
+</div>
+
+<hr id="example">
+<div class='section demo'>
+	<h2>Example</h2>
+<form action='' onsubmit='void(0)'>
+	<h3>Checkboxes</h3>
+		<div>
+		<label><input type="checkbox" checked="checked"> I'm a fancy cross-browser styled checkbox</label>
+		<div class='leftcol'>
+		<label><input type="checkbox"> This is a checkbox</label>
+		<label><input type="checkbox" checked="checked"> This is a checkbox</label>
+		<label><input type="checkbox"> This is a checkbox</label>
+		</div>
+		<div class='rightcol'>
+		<label><input type="checkbox" checked="checked" onclick="alert('The fancy checkbox inherits the onclick, onmousedown and onmouseup events automatically.');"> This has an onclick</label>
+		<label><input type="checkbox"> This is a checkbox</label>
+		<label><input type="checkbox" checked="checked"> This is a checkbox</label>
+		</div>
+		<label><input type="checkbox" checked="checked"> Apply any CSS styles for different states</label>
+		</div>
+	<h3>Radio buttons</h3>
+		<div class='leftcol'>
+		<label><input type="radio" name='leftcol'> This is a radio button</label>
+		<label><input type="radio" checked="checked" name='leftcol'> This is a radio button</label>
+		<label><input type="radio" name='leftcol'> This is a radio button</label>
+		</div>
+		<div class='rightcol'>
+		<label><input type="radio" name='rightcol'> This is a radio button</label>
+		<label><input type="radio" checked="checked" name='rightcol'> This is a radio button</label>
+		<label><input type="radio" name='rightcol'> This is a radio button</label>
+		</div>
+	<input type="reset" value="Reset Form" style='margin:1em;height:2.5em;background:#222;float:right;color:#fff'>
+</form>
+	<hr style='margin-bottom:1em'>
+	<h3>Full-featured demo</h3>
+	<p>For a working demo, including onSelect / onDeselect events, animation effects, and more, see the <a href="http://lipidity.com/fancy-form/demo/" title="Nice HTML forms using Javascript">FancyForm demo page</a>.</p>
+</div>
+
+
+<hr id="usage">
+<div class='section'>
+	<h2>How to Use</h2>
+	<h3>Easy Install</h3>
+	<ol>
+		<li>Add the following anywhere in your website:
+<pre><code>&lt;script type="text/javascript" src="js/mootools.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/fancyform.js"&gt;&lt;/script&gt;</code></pre>
+		</li>
+		<li>Add <acronym title='Cascading Style Sheets'>CSS</acronym> styles on your website to specify the appearance of the checkboxes and radio buttons. Add styles for the classes <code>checked</code> and <code>unchecked</code> for checked / unchecked checkboxes respectively, and likewise use the classes <code>selected</code> and <code>unselected</code> for radio buttons that are checked / unchecked.
+		</li>
+	</ol>
+
+	<p>Expecting more steps? Sorry to disappoint ;)</p>
+</div>
+
+<hr id='advanced'>
+<div class='section'>
+<h2>Advanced Styling</h2>
+
+<p><strong>Note:</strong> The <code>FancyForm.start()</code> function is called at the bottom of <a href="fancyform.js">fancyform.js</a> inside a <code>window.addEvent</code> block. If you're using the techniques described in this section, make sure you either replace this call or add the options to it.</p>
+
+	<h3 id='mootools'>More with Mootools</h3>
+<p>FancyForm uses the ultra-lightweight Mootools JavaScript framework. Mootools 1.2 is included in the download for FancyForm with Element/Element.Style, Utilities/DomReady and their dependencies. You may want to <a href="http://mootools.net/download">download Mootools</a> for yourself if you plan to use more of it's features in your website.</p>
+
+
+	<h3 id='param-1'>Limiting fancification</h3>
+<p>If you don't want to apply styling to every checkbox and radio button on your page, pass in an array containing the elements you want to style as the first argument for <code>FancyForm.start()</code> near the bottom of fancyform.js. For example,</p>
+<pre><code>var chkBoxes = new Array();
+chkBoxes[0] = document.getElementById('fancy-box');
+chkBoxes[1] = document.getElementById('other-fancy-box');
+FancyForm.start(chkBoxes);</code></pre>
+<p>Since Mootools is being used, you can also use the <code>$$</code> function and specify <acronym title='Cascading Style Sheets'>CSS</acronym> selectors, such as:</p>
+<pre><code>FancyForm.start( $$('#content .fancy-form input') );</code></pre>
+<p>Leave this parameter or pass in <var>0</var> if you want the script to target all applicable checkboxes and radio buttons.</p>
+
+	<h3 id='dyn-add'>Adding checkboxes</h3>
+<p>You can add additional inputs to be styled using the <code>FancyForm.add</code> function. This can be used, for example, if you dynamically create checkboxes or radio buttons.</p>
+<pre<code>var newLabel = new Element('label', {'for': 'chk1'}});
+var newCheckbox = new Element('input', {'type': 'checkbox', 'id', 'chk1', 'name': 'aChk'});
+newLabel.adopt(newCheckbox);
+newLabel.inject($(document.body));
+
+FancyForm.add(newCheckbox);</code></pre>
+
+	<h3 id='classes'>Changing classes</h3>
+<p>The second argument for the <code>FancyForm.start()</code> function, if set, should be an object or array containing any extra options.</p>
+<p>If you want to change the classes used by FancyForm, you can set the options <var>onClasses</var> and <var>offClasses</var>.</p>
+<p>The following configuration is used by default if nothing is specified:</p>
+<pre><code>FancyForm.start( 0, {
+    onClasses: {
+        checkbox: 'checked',
+           radio: 'selected'
+        },
+    offClasses: {
+        checkbox: 'unchecked',
+           radio: 'unselected'
+        }
+} );</code></pre>
+<p>If a type of input (checkbox or radio) is omitted from <var>onClasses</var>, elements of that type won't be affected by the script at all.</p>
+<p>In the following example, selected checkboxes will have the class <var>f_checked</var> and radio buttons won't be styled by the script (as they're omitted).</p>
+<pre><code>var f_onClasses = {
+	checkbox: 'f_checked'
+}
+var f_offClasses = {
+    checkbox: 'f_unchecked'
+}
+FancyForm.start( 0, {
+    onClasses: f_onClasses,
+    offClasses: f_offClasses
+} );</code></pre>
+<p>The above is equivalent to:</p>
+<pre><code>FancyForm.start( 0, {
+    onClasses: ['f_checked'].associate(['checkbox']),
+    offClasses: ['f_unchecked'].associate(['checkbox'])
+} );</code></pre>
+
+
+	<h3 id='extra-classes'>Extra classes</h3>
+<p>To make advanced styling easier, you can specify five extra classes to use. These go in with the second argument under <var>extraClasses</var>:</p>
+	<ul>
+		<li><strong>checkbox</strong>: Applied to all affected checkboxes</li>
+		<li><strong>radio</strong>: Applied to all affected radio buttons</li>
+		<li><strong>on</strong>: Applied to all affected elements that are checked</li>
+		<li><strong>off</strong>: Applied to all affected elements that are not checked</li>
+		<li><strong>all</strong>: Applied to all affected elements regardless of type and status</li>
+	</ul>
+	<p>For example, the following will apply a class &quot;fancy&quot; to all elements targeted by FancyForm:</p>
+	<pre><code>FancyForm.start( 0, {
+    extraClasses: {
+        all: 'fancy'
+    }
+});</code></pre>
+<p>Use <var>1</var> or <var>true</var> to apply all the default extra classes, which is equivalent to using:</p>
+<pre><code>// setting extraClasses: 1 is the same as using...
+FancyForm.start( 0, {
+    extraClasses: {
+        checkbox: 'f_checkbox',
+        radio: 'f_radio',
+        on: 'f_on',
+        off: 'f_off',
+        all: 'fancy'
+    }
+});</code></pre>
+
+
+	<h3 id='hooks'>Javascript hooks</h3>
+<p style='border-bottom:1px dashed #444'><strong>Note:</strong> FancyForm checkboxes inherit onclick, onmouseover and onmousedown events, so these will continue to work as normal. The hooks specified in this section complement these events and allow for finer control.</p>
+
+<p>If you'd like to execute a javascript function each time a button is checked, use the property <var>onSelect</var> in the options. For example, the following will display an alert with the name of the selected checkbox:</p>
+<pre><code>FancyForm.start( 0, {
+	onSelect: function(chk){
+		alert(chk.inputElement.getProperty('name'));
+	}
+});</code></pre>
+<p>Note the use of <var>chk.inputElement</var> to access the actual <var>input</var> element.</p>
+<p>You can also execute code when a checkbox or radio button is deselected (unchecked) by using <var>onDeselect</var>. Here, the animateCheckbox function is called:</p>
+<pre><code>FancyForm.start( 0, {
+	onDeselect: animateCheckbox
+});
+
+function animateCheckbox(chk) {
+      var el = chk.inputElement;
+	console.log(el.getProperty('name')+' deselected');
+	doSomeOtherThing(el);
+	fadeOut(el);
+}</code></pre>
+
+</div>
+
+
+<hr id="support">
+<div class='section'>
+	<h2>Support</h2>
+	<dl id='faq'>
+		<dt>I don't see any difference before and after adding the script.</dt>
+		<dd><p>Firstly, make sure you've actually applied some styles for the FancyForm classes (see <a href="#usage">How to use</a>).</p><p>If you have any other JavaScript on your site, check if you're getting any Javascript errors. If there is an error, it may give you an indication about where the conflict is occurring.</p><p>Don't forget, the script degrades gracefully on old browsers like Mac IE5.</p></dd>
+		<dt>Why doesn't <code>element.checked = true</code> work?</dt>
+		<dd><p>After changing a checkbox's state, update the display by calling <code>FancyForm.update(element.getParent())</code> (where <var>element</var> is your checkbox).</p></dd>
+		<dt>Can I use this script with an older version of MooTools?</dt>
+		<dd><p>For compatibility with MooTools 1.11, make the following changes:</p>
+		<p>Find all:<br><code>.combine(</code></p>
+		<p>Replace with:<br><code>.merge(</code></p>
+		<hr style='background:#333;height:1px;margin:1em'>
+		<p>Find all:<br><code>.get('tag')</code></p>
+		<p>Replace with:<br><code>.getTag()</code></p>
+		</dd>
+		<dt>How much does this script cost?</dt>
+		<dd><p>Nothing. You may use it in any way you wish, as long as proper attribution is provided. A link to <a href="http://lipidity.com">my site</a> would be appreciated.</p></dd>
+	</dl>
+</div>
+
+
+<hr id="contact">
+<div class='section contact'>
+	<h2>Contact</h2>
+	<p>Feedback on this script, whether it's criticism or accolades, is greatly appreciated.</p>
+	<p>Email me at <a href=&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#110;&#107;&#117;&#114;&#64;&#108;&#105;&#112;&#105;&#100;&#105;&#116;&#121;&#46;&#99;&#111;&#109;>a&#110;&#107;&#117;&#114;&#64;&#108;i&#112;i&#100;i&#116;&#121;&#46;&#99;&#111;&#109;</a>.</p>
+</div>
+
+</div>
+
+<hr>
+
+<script type="text/javascript" src="mootools.js"></script>
+<script type="text/javascript" src="fancyform.js"></script>
+</body>
+</html>

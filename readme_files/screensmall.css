@@ -1,0 +1,79 @@
+html,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,hr{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100.01%;font-family:inherit;vertical-align:baseline;text-decoration:none}th,td{text-align:left;font-weight:normal}blockquote::before,blockquote::after{content:""}
+body{margin:0;padding:0;background-color:#161613;color:#dedede;font:normal normal 86%/1.5em 'Lucida Grande','Lucida Sans','Lucida Sans Unicode',Verdana,sans-serif;min-width:700px}
+.section{overflow:auto}
+hr{width:100%;clear:both;height:4px;margin:2.5em 0;background:transparent}
+#overview{margin-top:0;margin-bottom:45px;}
+#overview+* h2{margin-top:0}
+#content .section+hr{background:#33383c}
+#topborder{position:fixed;top:0;left:0;right:0;height:1em;background-color:#4b5158;margin:0}
+#sidebar{position:fixed;top:38px;left:20px;width:230px}
+* html #sidebar{top:38px;left:20px;width:230px;position:absolute}
+#sidebar p{margin-top:0;font-size:0.9em}
+#content{margin:0 15% 5em 315px}
+#content p{margin:1em 0}
+p.lead{font-size:1em;color:#fff}
+p.lead em{color:#1d7ffc;font-style:normal}
+a:link{color:#fff}
+.section a:link{text-decoration:underline}
+a:visited{color:#e5c5c5;text-decoration:none}
+a:hover{color:#fd68fd;border-bottom-style:solid}
+a:active{color:#fb1080}
+.section a:focus{outline:1px dotted invert}
+strong{ font-weight:bold}
+q,cite,em{font-style:italic}
+q{quotes:'"' '"' "'" "'"}
+q:before{content:open-quote}q:after{content:close-quote}
+abbr,dfn,acronym{border-bottom:1px dotted #999;cursor:help}
+var,samp,kbd{font-family:Monaco,"Lucida Console",monospace;border-bottom:1px solid #162636;padding:2px;font-size:12px}
+ol,ul{margin:0.5em 0 1.2em 2em}
+ol{list-style-type:decimal;list-style-position:outside}
+li{margin-bottom:0.2em}
+li strong{color:#aaa}
+dl{margin:0.5em 0 1.2em 0}
+dt{padding-top:0.4em;margin-bottom:0.2em}
+dd{font-size:0.9em;margin-bottom:1.0em;padding-bottom:0.9em;padding-left:0.5em;border-bottom:1px dashed #3d3d33}
+dd:last-child{border:0}
+dl.faq dt{font-size:1em;font-weight:500;color:#e2e2e2;background-color:#212121;padding:0.5em;margin:0.5em 0}
+h1,h2,h3,h4,h5,h6{font-family:"Century Gothic","Trebuchet MS",sans-serif;line-height:130%;margin:0.8em 0;clear:both}
+h1{font-size:2.3em}
+h1 em{color:#1ea4fd;font-style:normal}
+#sidebar h1{margin-bottom:0}
+#sidebar a{color:#fff}
+#sidebar h1 a{color:#1d7ffc;font-weight:500;text-shadow:#1d7ffc 2px 2px 2px}
+#sidebar h1 a:hover{}
+h2{font-size:1.5em;letter-spacing:0.4pt;text-transform:uppercase;color:#fccc69}
+h3{font-size:1.1em;letter-spacing:0.2pt;text-transform:uppercase;color:#ecd191}
+h4{font-size:1.12em;color:#e0bc70;border-bottom:1px solid #2c2c2c;padding-left:10px}
+img{border:none;color:#fb1080}
+code{font-size:12px;font-family:Monaco,Verdana,sans-serif;background-color:#191919;color:#fde9bb;padding:0.3em 0.4em}
+pre{display:block;margin:1em 0;padding:0.4em 0.7em;border:1px solid #222;background-color:#1b1b1b;overflow:auto}
+pre>code{display:block;padding:0;margin:0;background:0;color:silver;padding-left:1.2em}
+.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word;_white-space:pre}
+#nav{list-style:none;margin:2em 2em 2em 0}
+#nav li{margin:0;font-size:0.8em}
+#nav a{display:block;height:2.0em;padding:0.3em 0.2em 0.2em 0.8em;padding:0.5em 1em;margin-bottom:1px;color:#eee;background-color:#181818;border:1px solid #1a1a1a}
+#nav a:hover{color:#eee;background-color:#222;border:1px solid #2a2a2a}
+#content ul{margin-left:1.5em}
+#content ul li{padding-left:0.3em;list-style-type:disc;list-style-position:outside}
+.download a:link{display:block;background-color:#1a1a1a;border:1px solid #1f1f1f;padding:1em 2em;text-decoration:none}
+.download a:hover{background-color:#222;border:1px solid #2a2a2a}
+#content ul.download li{padding:0.3em 0;background-image:none;list-style:none}
+.download li strong{font-family:"Trebuchet MS",Verdana,sans-serif;font-size:2.25em;color:#fff}
+.download li em{font-style:normal;color:#7269ea}
+label{margin-bottom:2px;margin-right:3px;padding-left:0.5em}
+.contact input,textarea{color:#fff;border:1px solid #333;background-color:#262323;padding:3px;font-size:0.9em}
+.contact input:hover,textarea:hover{background-color:#212121}
+.contact input:focus,textarea:focus{background-color:#111}
+input[type=submit]{padding:5px 15px}
+
+/* ---------------- */
+/* fancyform styles */
+/* ---------------- */
+
+.demo label{display:block;padding:0.5em;padding-left:32px;background-position:8px center;background-repeat:no-repeat;border:1px solid #252525;clear:both;cursor:pointer}
+.checked{background-color:#222;background-image:url(chk_on.png)}
+.unchecked{background-color:#1c1c1c;background-image:url(chk_off.png)}
+.selected{background-color:#222;background-image:url(rdo_on.png)}
+.unselected{background-color:#1c1c1c;background-image:url(rdo_off.png)}
+.leftcol{float:left;clear:left;width:50%}
+.rightcol{float:left;clear:right;width:50%}
